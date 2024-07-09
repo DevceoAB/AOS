@@ -1,11 +1,20 @@
-
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import React, { useEffect } from 'react'
+import NAvbar from "./components/NAvbar"
+import Hero from './components/Hero';
 
 function App() {
-  
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
   return (
     <>
-     <h1 className="text-red-400 text-4xl">Bappa Morya</h1>
+      <NAvbar />
+      <Hero />
+
     </>
   )
 }
